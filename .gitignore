@@ -1,0 +1,47 @@
+####https://github.com/github/gitignore
+.classpath
+.project
+target/
+bin/
+.settings/
+.idea/
+*.iml
+nb-configuration.xml
+src/main/webapp/META-INF
+src/main/resources/configuration.properties
+
+###########Scala ignore
+.classpath
+.project
+target/
+project/
+bin/
+.settings/
+.idea/
+*.iml
+*.class
+*.log
+
+###########Java ignore
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
