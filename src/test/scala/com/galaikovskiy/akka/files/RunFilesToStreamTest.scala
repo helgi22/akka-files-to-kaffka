@@ -4,6 +4,6 @@ import org.scalatest.FunSuite
 
 class RunFilesToStreamTest extends FunSuite {
   test("test main method") {
-    RunFilesToStream.main(Array("C:\\temp\\DMP-TEST\\Files"))
+    RunFilesToStream.main(Array("C:\\temp\\DMP-TEST\\Files\\"))
   }
 }

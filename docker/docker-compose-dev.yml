@@ -1,0 +1,26 @@
+version: "3"
+services:
+  cassandra:
+#    image: cpa2dev.kyivstar.ua/cpa3-cassandra-dev:latest
+    ports:
+      - "9042:9042"
+    volumes:
+#      - ./cassandra:/var/lib/cassandra
+      - ./cassandra/home:/home/cassandra/.cassandra
+  zookeeper:
+    image: wurstmeister/zookeeper
+    ports:
+      - "2181:2181"
+  kafka:
+    image: wurstmeister/kafka:latest
+    environment:
+      KAFKA_ADVERTISED_HOST_NAME: 127.0.0.1
+      KAFKA_ADVERTIZED_PORT: 9092
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: 'true'
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_LOG_RETENTION_HOURS: 26
+      KAFKA_LOG_ROLL_HOURS: 26
+    ports:
+      - "127.0.0.1:9092:9092"
+    volumes:
+      - ./kafka/:/kafka/
